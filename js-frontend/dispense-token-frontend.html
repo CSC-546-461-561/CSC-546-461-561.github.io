@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+       
+        <meta charset="utf-8" />
+        <!-- <link rel="stylesheet" href="./style.css"> 
+        
+        <script
+          src="https://unpkg.com/algosdk@v2.7.0/dist/browser/algosdk.min.js"
+          integrity="sha384-OP8U0zDUgTdYdeyxnrhicwju6SuPxm2tx4WaTYDeP5JiMS/OyifldTK5Y3vzPK9K"
+          crossorigin="anonymous"
+        ></script>
+
+        -->
+
+        <script src='./algo-sdk.min.js'></script>
+        <script src="./contract-frontend.js"></script>
+
+        <style>
+            .centerme {
+                #margin-left: 50vh;
+                padding-left:20%;
+            }
+        </style>
+        
+        <title>Token Dispenser for CSC 546 & 461(561)</title>
+       
+   </head>
+    
+   <body>
+
+      <div class="centerme" >
+        <h1>Gold Star Token Dispenser</h1>
+
+      
+        <label for = "addr"> Account Address: </label>
+        <input type="textbox" name="address" id="addr" required />
+      </div> <br>
+      
+      <div class="centerme">
+        <label for = 'phrase'> 25-Word Passphrase: </label>
+        <input type="textbox" name="passphrase" id="phrase" required />
+      </div> <br>
+
+      <div class="centerme">
+          <input type="radio" id="546" name="course" value="546" required checked />
+          <label for = "546">546</label>
+
+          <br>
+          
+          <input type="radio" id="461" name="course" value="461" />
+          <label for = "461"> 461 (561)</label>
+      </div>
+       
+      <br><br>
+     
+      <div class="centerme" class="centerme">
+          
+        <button onClick = 'contract_optin()' type = 'button'>Contract Opt-in</button> 
+        <br>
+        <br>
+        <button onClick = 'asset_optin()' type = 'button'>Asset Opt-in</button>
+        <br>
+        <br>
+        <button onClick = 'dispense()' type = 'button'>Dispense Token From Contract</button>
+        <br>
+        <br> 
+        <button onClick = 'balance()' type = 'button'>Account Balance</button>
+     
+        <br>
+        <br>
+    
+        <h3> OUTPUT: </h3>
+        <div name="display" id='OutputDisplay'/>
+          
+     </div>
+      
+   </body>
+    
+</html>
+
